@@ -1,0 +1,25 @@
+import 'package:json_annotation/json_annotation.dart';
+
+// Файл post.g.dart создаётся командой:
+// dart run build_runner build --delete-conflicting-outputs
+part 'post.g.dart';
+
+/// Модель поста из https://jsonplaceholder.typicode.com/posts
+@JsonSerializable()
+class Post {
+  final int userId;
+  final int id;
+  final String title;
+  final String body;
+
+  const Post({
+    required this.userId,
+    required this.id,
+    required this.title,
+    required this.body,
+  });
+
+  factory Post.fromJson(Map<String, dynamic> json) => _$PostFromJson(json);
+
+  Map<String, dynamic> toJson() => _$PostToJson(this);
+}
