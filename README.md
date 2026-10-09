@@ -10,3 +10,7 @@ flutter_bloc, HTTP-запрос к jsonplaceholder.typicode.com/posts, моде�
 flutter pub get
 flutter run
 ```
+
+## Скриншот
+
+![Список постов](screenshots/1_posts_list.png)
